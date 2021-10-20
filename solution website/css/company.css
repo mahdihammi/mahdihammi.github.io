@@ -1,0 +1,67 @@
+body{
+    min-height: 100vh;
+}
+.section
+{
+    position: relative;
+}
+
+
+.h1
+{
+    font-size: 3.5rem;
+}
+
+.btn:hover
+{
+    background-color: #2dc997;
+}
+
+.nav-link:hover
+{
+    border-bottom: 2px solid #2dc997 ;
+}
+
+
+.img-fluid
+{
+    height: 100%;
+}
+
+.bi
+{
+color: #2dc997;
+
+}
+
+.icon-box
+{
+    border-color:  #2dc997;
+    width: 80px;
+    height: 80px;
+    
+}
+
+
+.section
+{
+    background: url('../img/hero-bg.jpg');
+    background-size: cover;
+}
+.section::before
+{
+    background-color:rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.container-text
+{
+    color: #999;
+
+}

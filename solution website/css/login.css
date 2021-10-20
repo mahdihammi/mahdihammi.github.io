@@ -1,0 +1,30 @@
+body{
+    background-color: #37517e;
+    height:100vh;
+}
+
+#login
+{
+    height:100%;
+}
+
+.container form
+{
+    padding: 15px;
+    border-radius: 10px;
+    width: 550px;
+    background-color: aliceblue;
+   
+    
+}
+
+.container form input
+{
+    border:none;
+    outline:none;
+    width:100%;
+    border-bottom:2px solid #37517e;
+    background-color: aliceblue;
+
+}
+

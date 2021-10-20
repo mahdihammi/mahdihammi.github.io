@@ -1,0 +1,230 @@
+body
+{
+    overflow-x: hidden;
+}
+
+
+
+.navbar
+{
+    background-color:transparent;
+}
+
+.navig
+{
+    position: static;
+}
+
+ .navbar-nav a
+{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.navbar-brand
+{
+    color: #fff;
+    font-size: 30px;
+}
+.navbar-brand:hover
+{
+    color: #fff;
+}
+.navbar-expand-lg .navbar-nav .nav-item :hover
+
+{
+    border-bottom: 2px solid #f00;
+
+}
+
+.navbar-nav a:hover,.navbar-nav a:focus
+{
+    color: #f00;
+}
+
+
+
+.dropdown .dropdown-menu
+{
+    color: #fff;
+    background-color: rgb(0, 0, 0,.9);
+}
+
+
+
+.navbar-expand-lg .navbar-nav {
+margin-right: 50px;
+
+}
+
+
+.first
+{
+    background-image: url('../pictures/camera-3985711_1920.jpg');
+    height: 650px;
+    width: 100%;
+    /*margin-top: 50px;*/
+    background-size: cover;
+}
+
+.sign
+{
+    z-index: 4000;
+    position: absolute;
+    top: 350px;
+    left: 320px;
+    text-decoration: none;
+    font-size: 1rem;
+    color:#fff;
+    background-color: #f00;
+    padding: 10px;
+    border-radius: 2px;
+    transition: .5s  background-color,color  ease;
+    
+
+}
+.sign:hover
+{
+    background-color: #fff;
+    color: #000 ;
+}
+
+.first h2
+{
+    position: absolute;
+    text-align: center;
+    left: 220px;
+    top:200px;
+    font-size:2.5rem;
+    border-color: #fff;
+    color: white;
+}
+.content1
+{
+    height: 300px;
+}
+
+
+.col
+{
+    text-align: center;
+    margin-top: 80px;
+}
+.col:nth-child(2)
+{
+    margin: 0;
+}
+
+
+.content1 .row 
+{
+    height:100%;
+
+}
+/*content*/
+.content
+{
+    height:600px;
+    background-color: #000;
+    
+}
+.content .col
+{
+    height:500px;
+
+}
+
+.content .row-pic
+{
+    position: relative;
+    top: 50px;
+    height: 500px;
+}
+
+
+.row  img
+{
+    opacity: .6;
+    width:100%;
+    height: 500px;
+}
+.row .col:hover img
+{
+    opacity: 1;
+    
+}
+.row .col:hover a
+{
+    opacity: 1;
+}
+
+.col img 
+
+.col h6
+{
+  text-align: center;
+}
+
+.col-lg-6
+{margin-top: 0;}
+
+
+
+.content .row h5
+{
+    
+    font-size: 3rem;
+    position: relative;
+    bottom: 300px;
+    text-shadow: 2px 2px 8px #000 ;
+    color: #fff;
+} 
+.content .col a
+{
+    opacity: .6;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 150px;
+    color: #fff;
+    background-color: rgb(255, 0, 0);
+   text-decoration: none;
+   padding: 10px;
+   border-radius: 3px;
+   margin-left: 12px;
+   transition: .2s background-color,color ease;
+} 
+.content .col a:hover
+{
+    background-color: #000;
+    color: #f00;
+    
+}
+
+
+content .row:nth-child(1)
+{
+    height: 500px;
+}
+
+
+
+
+#carouselExampleIndicators
+{
+    height: 600px;
+}
+
+#carouselExampleIndicators .carousel-inner
+{
+    height: 100%;
+}
+ 
+
+
+
+
+/*footer******************************/
+footer
+{
+    margin-top: 250px;
+}

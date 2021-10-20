@@ -1,0 +1,439 @@
+body
+{
+    min-height: 100vh;
+}
+
+*
+{
+    scroll-behavior: smooth;
+}
+
+#first
+{
+    min-height: 80vh;
+    
+    background:#37517e;
+ 
+}
+
+
+
+
+.h1
+{
+    font-size: 3rem;
+}
+
+.h4
+{
+    color: rgb(255, 255,255,.5);
+}
+
+.btn-watch-video
+{
+    text-decoration: none;
+    margin-left: 14px;
+}
+
+
+
+
+.btn-primary{padding:10px 28px 11px 28px}
+
+.col-2 img
+{
+    max-width: 45%;
+    padding: 20px 0;
+    filter: grayscale(100);
+    transition: .5s;
+    
+}
+.col-2 img:hover
+{
+    filter:none
+}
+
+.btn-outline-primary
+{
+    text-transform: capitalize;
+    padding: 4px 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    border: 2px solid;
+    padding: 10px 30px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.header-scrolled
+{background-color: rgb(55, 81, 126,.4);
+}
+.brand-name
+{
+    text-decoration: none;
+}
+
+
+#content
+{
+    margin:50px 0; 
+    background-color:#f3f5fa;
+}
+
+.title
+{
+    color:#37517e; ;
+}
+
+.row
+{
+    flex-wrap: wrap-reverse;
+}
+
+.get-btn:hover
+{
+background-color:#0d6efd;
+}
+
+.nav-link
+{
+    transition:.3s ease-in;
+}
+.nav-link:hover
+{
+   
+    border-bottom: 2px solid #0d6efd ;
+}
+
+.skills
+{
+    padding: 80px 0;
+}
+
+.skill
+{
+    font-size: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+    color: #37517e;
+    font-weight: 600;
+    margin-bottom: 8px;
+
+}
+
+.skill .num 
+{
+    float: right;
+}
+
+.skill-content .progress
+{
+    height: 60px;
+    background-color: #fff;
+}
+.progress .progress-bar-wrap
+{
+    width: 100%;
+    height: 10px;
+    background-color:#e8edf5;
+}
+
+.skill-content  .progress-bar
+{
+background-color:#37517e;
+transition: .9s;
+height: 10px;
+
+}
+.bar-1
+{
+    width: 90%;
+}
+
+.bar-2
+{
+    width: 80%;
+}
+
+
+.services
+{
+    background-color: #f3f5fa;
+
+}
+
+.service-title
+{
+  margin-top: 15px ;
+  margin-bottom: 0;
+ font-weight: bold;
+ text-transform: uppercase;
+}
+
+.blue-line
+{
+    height: 3px;
+    background-color: #0d6efd;
+    width: 50px;
+    margin: 15px 0;
+}
+
+.service-box
+{
+    background-color: #fff;
+    box-shadow: 0px 0 25px 0 rgb(0 0 0 / 10%);
+    margin: 10px 15px;
+    transition: all .5s ease;
+    cursor: pointer;
+    
+}
+
+.icon-box
+{
+    padding: 50px 30px;
+}
+
+.bxl-dribbble
+{
+    color: #0d6efd;
+    font-size: 30px;
+}
+
+.services .container
+{
+    padding: 30px 0;
+
+}
+
+.service-box:hover
+{
+    transform: translateY(-10px);
+
+}
+.service-box .icon-box  h4 
+{transition: all .5s ;
+    color: #37517e;
+}
+.service-box:hover .icon-box  h4 
+{
+  color: #0d6efd;
+}
+
+
+.action
+{
+    padding: 120px 0;
+     background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url('../img/cta-bg.jpg') fixed center center;
+}
+
+.call-action h1 
+{
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.call-button
+{
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 16px;
+    transition: border,background-color,  .7s ;
+
+    
+
+}
+
+.call-button a
+{
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.call-button:hover
+{
+    background-color: #47b2e4;
+    border: #47b2e4;
+}
+
+
+
+
+
+ 
+
+.adress
+{
+    margin: 20px 0;
+    box-shadow: 0px 0 25px 0 rgb(0 0 0 / 10%);
+    padding: 50px;
+
+}
+.form-box
+{
+box-shadow: 0px 0 25px 0 rgb(0 0 0 / 10%);
+margin: 20px;
+}
+
+
+
+
+form
+{
+    padding: 50px;
+    
+
+
+}
+
+.form-group
+{
+    margin-bottom: 15px;
+}
+
+.btn-primary 
+{
+    margin-top: 20px;
+
+}
+
+
+
+.adress i
+{
+    font-size: 20px;
+    color: #0d6efd;
+    background-color: #e7f5fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; 
+    padding: 15px;
+    margin-right: 8px;
+    width: 44px;
+    height: 44px;
+}
+.adress p
+{
+    padding: 0 0 15px 15px;
+}
+
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.5s;
+}
+  
+  .team .member .pic {
+    overflow: hidden;
+    width: 180px;
+    border-radius: 50%;
+  }
+  
+  .team .member .pic img {
+    transition: ease-in-out 0.3s;
+  }
+  
+  .team .member:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team .member .member-info {
+    padding-left: 30px;
+  }
+  
+  .team .member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #37517e;
+  }
+  
+  .team .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+  }
+  
+  .team .member span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #cbd6e9;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .team .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+  }
+  
+  .team .member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .team .member .social a {
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    background: #eff2f8;
+  }
+  
+  .team .member .social a i {
+    color: #37517e;
+    font-size: 16px;
+    margin: 0 2px;
+  }
+  
+  .team .member .social a:hover {
+    background: #47b2e4;
+  }
+  
+  .team .member .social a:hover i {
+    color: #fff;
+  }
+  
+  .team .member .social a + a {
+    margin-left: 8px;
+}
+
+.first-img
+{
+    animation: animate 2s ease-in-out infinite;
+}
+
+
+
+@keyframes animate
+{
+    0%
+    {
+        top:-8px
+    }
+    100%
+    {
+    top:0px;
+    }
+}
