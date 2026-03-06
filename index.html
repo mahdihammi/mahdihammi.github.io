@@ -1,27 +1,876 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>John Doe | Data Engineer Portfolio</title>
-    <meta name="description" content="Data Engineer portfolio — scalable pipelines, cloud-native solutions, and modern data stacks." />
-    <meta name="author" content="John Doe" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Rivera — Data Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-    <meta property="og:title" content="John Doe | Data Engineer" />
-    <meta property="og:description" content="Data Engineer portfolio — scalable pipelines, cloud-native solutions, and modern data stacks." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- ═══════════════════════════════════ NAV ══════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">AR</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#articles" class="nav-link">Articles</a></li>
+      <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        <span>Available for opportunities</span>
+      </div>
+
+      <h1 class="hero-name reveal-up delay-1">
+        <span class="name-line">Alex</span>
+        <span class="name-line accent-gradient">Rivera</span>
+      </h1>
+
+      <div class="hero-title reveal-up delay-2">
+        <span class="title-prefix">—</span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">_</span>
+      </div>
+
+      <p class="hero-tagline reveal-up delay-3">
+        Architecting data pipelines that transform raw chaos<br />
+        into intelligence at petabyte scale.
+      </p>
+
+      <div class="hero-stats reveal-up delay-4">
+        <div class="stat-item">
+          <span class="stat-num" data-target="6">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="50">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Pipelines Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="12">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">TB Processed Daily</span>
+        </div>
+      </div>
+
+      <div class="hero-actions reveal-up delay-5">
+        <a href="#projects" class="btn btn-primary">
+          <span class="btn-icon">⬡</span> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span class="btn-icon">◈</span> Contact Me
+        </a>
+      </div>
+
+      <div class="hero-socials reveal-up delay-6">
+        <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">01 / EXPERIENCE</span>
+        <h2 class="section-title">Career <span class="accent-gradient">Timeline</span></h2>
+        <p class="section-sub">Building data infrastructure across industries and scales.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal-left" data-index="0">
+          <div class="timeline-dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="company-name">Stripe</h3>
+                <span class="role-title">Senior Data Engineer</span>
+              </div>
+              <span class="timeline-date">2022 — Present</span>
+            </div>
+            <p class="card-desc">Led the design and implementation of a real-time fraud detection data platform processing 2M+ events/second. Reduced pipeline latency by 73% through architectural redesign using Apache Flink and Kafka Streams.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Apache Flink</span>
+              <span class="tech-tag">Kafka</span>
+              <span class="tech-tag">Spark</span>
+              <span class="tech-tag">dbt</span>
+              <span class="tech-tag">GCP</span>
+              <span class="tech-tag">BigQuery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item-right reveal-right" data-index="1">
+          <div class="timeline-dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="company-name">Databricks</h3>
+                <span class="role-title">Data Engineer II</span>
+              </div>
+              <span class="timeline-date">2020 — 2022</span>
+            </div>
+            <p class="card-desc">Designed lakehouse architectures for Fortune 500 clients. Migrated legacy Hadoop clusters to Delta Lake, achieving 4x query performance improvement and 60% cost reduction in compute spend.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Delta Lake</span>
+              <span class="tech-tag">PySpark</span>
+              <span class="tech-tag">Airflow</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Terraform</span>
+              <span class="tech-tag">Redshift</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left" data-index="2">
+          <div class="timeline-dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="company-name">Spotify</h3>
+                <span class="role-title">Data Engineer I</span>
+              </div>
+              <span class="timeline-date">2018 — 2020</span>
+            </div>
+            <p class="card-desc">Built and maintained the recommendation engine data pipeline serving 400M+ users. Developed real-time user behavior tracking and A/B testing infrastructure that powered ML feature stores.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Luigi</span>
+              <span class="tech-tag">Cassandra</span>
+              <span class="tech-tag">GCS</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Kubernetes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item-right reveal-right" data-index="3">
+          <div class="timeline-dot">
+            <div class="dot-inner"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="company-name">Accenture</h3>
+                <span class="role-title">Data Analytics Consultant</span>
+              </div>
+              <span class="timeline-date">2016 — 2018</span>
+            </div>
+            <p class="card-desc">Delivered data warehouse modernization projects for banking and retail clients. Implemented ETL pipelines and BI dashboards that reduced reporting time from days to hours.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">SSIS</span>
+              <span class="tech-tag">Tableau</span>
+              <span class="tech-tag">Azure</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ SKILLS ════════════════════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02 / SKILLS</span>
+        <h2 class="section-title">Technical <span class="accent-gradient">Arsenal</span></h2>
+        <p class="section-sub">Tools and technologies I use to build production-grade data systems.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category reveal-up delay-1">
+          <div class="category-header">
+            <span class="category-icon">⬡</span>
+            <h3>Data Engineering</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🔥</span><span>Apache Spark</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🌊</span><span>Apache Kafka</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🌬️</span><span>Apache Airflow</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">◈</span><span>Apache Flink</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">⚡</span><span>dbt</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-2">
+          <div class="category-header">
+            <span class="category-icon">☁</span>
+            <h3>Cloud Platforms</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🟠</span><span>AWS (EMR, Glue, S3)</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🔵</span><span>Google Cloud (GCP)</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🔷</span><span>Azure (ADF, Synapse)</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🐳</span><span>Docker / Kubernetes</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🔧</span><span>Terraform</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-3">
+          <div class="category-header">
+            <span class="category-icon">◉</span>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🐘</span><span>PostgreSQL</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">❄️</span><span>Snowflake</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🔴</span><span>BigQuery</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">⚡</span><span>Cassandra</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🟢</span><span>MongoDB</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-4">
+          <div class="category-header">
+            <span class="category-icon">📊</span>
+            <h3>Visualization</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">📈</span><span>Tableau</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🔵</span><span>Power BI</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🌐</span><span>Grafana</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">📊</span><span>Metabase</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="77"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🐍</span><span>Matplotlib / Plotly</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-5">
+          <div class="category-header">
+            <span class="category-icon">&lt;/&gt;</span>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🐍</span><span>Python</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="97"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🗄️</span><span>SQL / Advanced SQL</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">⚙️</span><span>Scala</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🐹</span><span>Go</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-icon">🐚</span><span>Bash / Shell</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category skill-category-wide reveal-up delay-6">
+          <div class="category-header">
+            <span class="category-icon">◈</span>
+            <h3>Tech Ecosystem</h3>
+          </div>
+          <div class="tech-pills">
+            <span class="tech-pill">Delta Lake</span>
+            <span class="tech-pill">Apache Iceberg</span>
+            <span class="tech-pill">Hudi</span>
+            <span class="tech-pill">Presto</span>
+            <span class="tech-pill">Trino</span>
+            <span class="tech-pill">Hive</span>
+            <span class="tech-pill">HDFS</span>
+            <span class="tech-pill">Zookeeper</span>
+            <span class="tech-pill">Elasticsearch</span>
+            <span class="tech-pill">Redis</span>
+            <span class="tech-pill">Spark Streaming</span>
+            <span class="tech-pill">MLflow</span>
+            <span class="tech-pill">Great Expectations</span>
+            <span class="tech-pill">DataHub</span>
+            <span class="tech-pill">OpenLineage</span>
+            <span class="tech-pill">Git</span>
+            <span class="tech-pill">CI/CD</span>
+            <span class="tech-pill">Prometheus</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ PROJECTS ══════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">03 / PROJECTS</span>
+        <h2 class="section-title">Featured <span class="accent-gradient">Projects</span></h2>
+        <p class="section-sub">Production-grade systems built to solve real data engineering challenges.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up delay-1">
+          <div class="project-image-wrap">
+            <!-- To add a project image: replace the data-bg value with your image URL -->
+            <!-- e.g., data-bg="./images/project1.jpg" -->
+            <div class="project-image" data-bg="" style="--hue: 185deg">
+              <div class="project-placeholder-art">
+                <svg viewBox="0 0 200 120" fill="none"><polyline points="10,80 40,50 70,65 100,30 130,45 160,20 190,35" stroke="rgba(0,200,255,0.6)" stroke-width="2" fill="none"/><circle cx="40" cy="50" r="4" fill="#00c8ff"/><circle cx="100" cy="30" r="4" fill="#00c8ff"/><circle cx="160" cy="20" r="4" fill="#00c8ff"/><rect x="20" y="85" width="20" height="25" fill="rgba(0,200,255,0.3)" rx="2"/><rect x="55" y="70" width="20" height="40" fill="rgba(0,200,255,0.3)" rx="2"/><rect x="90" y="60" width="20" height="50" fill="rgba(0,200,255,0.3)" rx="2"/><rect x="125" y="50" width="20" height="60" fill="rgba(0,200,255,0.3)" rx="2"/><rect x="160" y="40" width="20" height="70" fill="rgba(0,200,255,0.3)" rx="2"/></svg>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com" target="_blank" class="project-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Real-Time Fraud Detection Pipeline</h3>
+            <p class="project-desc">End-to-end streaming pipeline ingesting 2M events/sec with sub-100ms anomaly detection using ML models served via feature store.</p>
+            <div class="project-tech">
+              <span>Flink</span><span>Kafka</span><span>Redis</span><span>BigQuery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-2">
+          <div class="project-image-wrap">
+            <div class="project-image" data-bg="" style="--hue: 270deg">
+              <div class="project-placeholder-art">
+                <svg viewBox="0 0 200 120" fill="none"><circle cx="100" cy="60" r="40" stroke="rgba(160,80,255,0.4)" stroke-width="1" stroke-dasharray="4 3"/><circle cx="100" cy="60" r="25" stroke="rgba(160,80,255,0.6)" stroke-width="1.5"/><circle cx="100" cy="60" r="8" fill="rgba(160,80,255,0.8)"/><line x1="100" y1="60" x2="145" y2="25" stroke="rgba(160,80,255,0.5)" stroke-width="1"/><line x1="100" y1="60" x2="55" y2="95" stroke="rgba(160,80,255,0.5)" stroke-width="1"/><line x1="100" y1="60" x2="155" y2="75" stroke="rgba(160,80,255,0.5)" stroke-width="1"/><line x1="100" y1="60" x2="45" y2="45" stroke="rgba(160,80,255,0.5)" stroke-width="1"/><circle cx="145" cy="25" r="5" fill="rgba(160,80,255,0.6)"/><circle cx="55" cy="95" r="5" fill="rgba(160,80,255,0.6)"/><circle cx="155" cy="75" r="5" fill="rgba(160,80,255,0.6)"/><circle cx="45" cy="45" r="5" fill="rgba(160,80,255,0.6)"/></svg>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com" target="_blank" class="project-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Data Lakehouse Migration Framework</h3>
+            <p class="project-desc">Automated migration toolkit that converts legacy Hive tables to Delta Lake with zero-downtime rollback and data quality validation.</p>
+            <div class="project-tech">
+              <span>Delta Lake</span><span>Spark</span><span>Python</span><span>Terraform</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-3">
+          <div class="project-image-wrap">
+            <div class="project-image" data-bg="" style="--hue: 210deg">
+              <div class="project-placeholder-art">
+                <svg viewBox="0 0 200 120" fill="none"><rect x="10" y="10" width="50" height="30" rx="4" fill="rgba(0,150,255,0.3)" stroke="rgba(0,150,255,0.6)" stroke-width="1"/><rect x="75" y="45" width="50" height="30" rx="4" fill="rgba(0,150,255,0.3)" stroke="rgba(0,150,255,0.6)" stroke-width="1"/><rect x="140" y="10" width="50" height="30" rx="4" fill="rgba(0,150,255,0.3)" stroke="rgba(0,150,255,0.6)" stroke-width="1"/><rect x="75" y="80" width="50" height="30" rx="4" fill="rgba(0,200,150,0.3)" stroke="rgba(0,200,150,0.6)" stroke-width="1"/><line x1="60" y1="25" x2="75" y2="60" stroke="rgba(0,150,255,0.5)" stroke-width="1.5" marker-end="url(#arr)"/><line x1="140" y1="25" x2="125" y2="60" stroke="rgba(0,150,255,0.5)" stroke-width="1.5"/><line x1="100" y1="75" x2="100" y2="80" stroke="rgba(0,200,150,0.5)" stroke-width="1.5"/></svg>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com" target="_blank" class="project-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">ML Feature Store Platform</h3>
+            <p class="project-desc">Low-latency feature serving platform with point-in-time joins, backfill support, and consistent online/offline feature computation.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Redis</span><span>Feast</span><span>Airflow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-1">
+          <div class="project-image-wrap">
+            <div class="project-image" data-bg="" style="--hue: 160deg">
+              <div class="project-placeholder-art">
+                <svg viewBox="0 0 200 120" fill="none"><rect x="85" y="5" width="30" height="20" rx="3" fill="rgba(0,220,130,0.4)" stroke="rgba(0,220,130,0.7)" stroke-width="1"/><rect x="20" y="50" width="35" height="20" rx="3" fill="rgba(0,220,130,0.3)" stroke="rgba(0,220,130,0.5)" stroke-width="1"/><rect x="83" y="50" width="34" height="20" rx="3" fill="rgba(0,220,130,0.3)" stroke="rgba(0,220,130,0.5)" stroke-width="1"/><rect x="145" y="50" width="35" height="20" rx="3" fill="rgba(0,220,130,0.3)" stroke="rgba(0,220,130,0.5)" stroke-width="1"/><rect x="10" y="90" width="25" height="18" rx="3" fill="rgba(0,220,130,0.2)" stroke="rgba(0,220,130,0.4)" stroke-width="1"/><rect x="42" y="90" width="25" height="18" rx="3" fill="rgba(0,220,130,0.2)" stroke="rgba(0,220,130,0.4)" stroke-width="1"/><line x1="100" y1="25" x2="37" y2="50" stroke="rgba(0,220,130,0.5)" stroke-width="1"/><line x1="100" y1="25" x2="100" y2="50" stroke="rgba(0,220,130,0.5)" stroke-width="1"/><line x1="100" y1="25" x2="162" y2="50" stroke="rgba(0,220,130,0.5)" stroke-width="1"/><line x1="37" y1="70" x2="22" y2="90" stroke="rgba(0,220,130,0.4)" stroke-width="1"/><line x1="37" y1="70" x2="55" y2="90" stroke="rgba(0,220,130,0.4)" stroke-width="1"/></svg>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com" target="_blank" class="project-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Data Quality Orchestration Engine</h3>
+            <p class="project-desc">Automated data validation framework with configurable rule sets, alerting, and lineage tracking across 500+ pipeline assets.</p>
+            <div class="project-tech">
+              <span>Great Expectations</span><span>dbt</span><span>PagerDuty</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-2">
+          <div class="project-image-wrap">
+            <div class="project-image" data-bg="" style="--hue: 30deg">
+              <div class="project-placeholder-art">
+                <svg viewBox="0 0 200 120" fill="none"><ellipse cx="100" cy="60" rx="70" ry="35" stroke="rgba(255,160,0,0.4)" stroke-width="1" fill="none"/><ellipse cx="100" cy="60" rx="50" ry="25" stroke="rgba(255,160,0,0.5)" stroke-width="1" fill="none"/><ellipse cx="100" cy="60" rx="30" ry="15" stroke="rgba(255,160,0,0.7)" stroke-width="1.5" fill="rgba(255,160,0,0.1)"/><text x="88" y="64" fill="rgba(255,160,0,0.8)" font-size="10" font-family="monospace">COLD</text><text x="65" y="40" fill="rgba(255,160,0,0.6)" font-size="8" font-family="monospace">WARM</text><text x="35" y="25" fill="rgba(255,160,0,0.4)" font-size="8" font-family="monospace">HOT</text></svg>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com" target="_blank" class="project-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Intelligent Data Tiering System</h3>
+            <p class="project-desc">Cost-optimization layer that automatically promotes/demotes data between hot, warm, and cold storage tiers based on access patterns.</p>
+            <div class="project-tech">
+              <span>Python</span><span>S3</span><span>Lambda</span><span>DynamoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-3">
+          <div class="project-image-wrap">
+            <div class="project-image" data-bg="" style="--hue: 320deg">
+              <div class="project-placeholder-art">
+                <svg viewBox="0 0 200 120" fill="none"><path d="M30,90 Q60,20 100,50 Q140,80 170,30" stroke="rgba(255,80,200,0.6)" stroke-width="2" fill="none"/><path d="M30,95 Q60,25 100,55 Q140,85 170,35" stroke="rgba(255,80,200,0.2)" stroke-width="8" fill="none"/><circle cx="30" cy="90" r="5" fill="rgba(255,80,200,0.7)"/><circle cx="100" cy="50" r="5" fill="rgba(255,80,200,0.7)"/><circle cx="170" cy="30" r="5" fill="rgba(255,80,200,0.7)"/><line x1="30" y1="100" x2="170" y2="100" stroke="rgba(255,80,200,0.2)" stroke-width="1"/><line x1="30" y1="80" x2="30" y2="105" stroke="rgba(255,80,200,0.3)" stroke-width="1"/><line x1="100" y1="80" x2="100" y2="105" stroke="rgba(255,80,200,0.3)" stroke-width="1"/><line x1="170" y1="80" x2="170" y2="105" stroke="rgba(255,80,200,0.3)" stroke-width="1"/></svg>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com" target="_blank" class="project-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Open-Source Pipeline Observability</h3>
+            <p class="project-desc">End-to-end data lineage and observability toolkit with OpenLineage integration, custom metrics, and Slack incident alerting.</p>
+            <div class="project-tech">
+              <span>OpenLineage</span><span>Grafana</span><span>Prometheus</span><span>Go</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CERTIFICATIONS ════════════════════════════ -->
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">04 / CERTIFICATIONS</span>
+        <h2 class="section-title">Credentials & <span class="accent-gradient">Certifications</span></h2>
+        <p class="section-sub">Validated expertise across cloud platforms and data engineering disciplines.</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card reveal-up delay-1">
+          <div class="cert-image-wrap">
+            <!-- To add a cert image: replace data-bg with your image URL -->
+            <div class="cert-image" data-bg="" style="--cert-color: #FF6B35">
+              <div class="cert-placeholder">
+                <span class="cert-provider-logo">AWS</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h4 class="cert-title">AWS Certified Data Engineer</h4>
+            <span class="cert-org">Amazon Web Services</span>
+            <span class="cert-date">Mar 2024</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up delay-2">
+          <div class="cert-image-wrap">
+            <div class="cert-image" data-bg="" style="--cert-color: #4285F4">
+              <div class="cert-placeholder">
+                <span class="cert-provider-logo">GCP</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h4 class="cert-title">Google Cloud Professional Data Engineer</h4>
+            <span class="cert-org">Google Cloud Platform</span>
+            <span class="cert-date">Nov 2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up delay-3">
+          <div class="cert-image-wrap">
+            <div class="cert-image" data-bg="" style="--cert-color: #FF3621">
+              <div class="cert-placeholder">
+                <span class="cert-provider-logo">DBX</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h4 class="cert-title">Databricks Certified Associate</h4>
+            <span class="cert-org">Databricks</span>
+            <span class="cert-date">Jun 2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up delay-4">
+          <div class="cert-image-wrap">
+            <div class="cert-image" data-bg="" style="--cert-color: #00B4D8">
+              <div class="cert-placeholder">
+                <span class="cert-provider-logo">CCA</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h4 class="cert-title">Confluent Certified Developer for Apache Kafka</h4>
+            <span class="cert-org">Confluent</span>
+            <span class="cert-date">Jan 2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up delay-5">
+          <div class="cert-image-wrap">
+            <div class="cert-image" data-bg="" style="--cert-color: #0078D4">
+              <div class="cert-placeholder">
+                <span class="cert-provider-logo">AZ</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h4 class="cert-title">Azure Data Engineer Associate</h4>
+            <span class="cert-org">Microsoft Azure</span>
+            <span class="cert-date">Aug 2022</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up delay-6">
+          <div class="cert-image-wrap">
+            <div class="cert-image" data-bg="" style="--cert-color: #29B5E8">
+              <div class="cert-placeholder">
+                <span class="cert-provider-logo">SF</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h4 class="cert-title">Snowflake SnowPro Core</h4>
+            <span class="cert-org">Snowflake</span>
+            <span class="cert-date">Apr 2022</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ ARTICLES ══════════════════════════════ -->
+  <section class="section" id="articles">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">05 / ARTICLES</span>
+        <h2 class="section-title">Published <span class="accent-gradient">Writing</span></h2>
+        <p class="section-sub">Sharing knowledge on data engineering best practices, architectures, and tools.</p>
+      </div>
+
+      <div class="articles-grid">
+
+        <article class="article-card reveal-up delay-1">
+          <div class="article-meta-top">
+            <span class="article-platform platform-medium">Medium</span>
+            <span class="article-date">Feb 12, 2025</span>
+          </div>
+          <h3 class="article-title">Building a Petabyte-Scale Lakehouse: Lessons from the Trenches</h3>
+          <p class="article-summary">A deep dive into the architectural decisions, trade-offs, and hard-won lessons from migrating a Fortune 500 data warehouse to a modern Delta Lake lakehouse.</p>
+          <div class="article-tags">
+            <span>Lakehouse</span><span>Delta Lake</span><span>Architecture</span>
+          </div>
+          <a href="#" target="_blank" class="article-link">
+            Read Article <span class="link-arrow">→</span>
+          </a>
+        </article>
+
+        <article class="article-card reveal-up delay-2">
+          <div class="article-meta-top">
+            <span class="article-platform platform-devto">Dev.to</span>
+            <span class="article-date">Jan 5, 2025</span>
+          </div>
+          <h3 class="article-title">Apache Flink vs Spark Streaming: A Practical 2025 Comparison</h3>
+          <p class="article-summary">An honest, benchmark-backed comparison of Flink and Spark Structured Streaming for real-time data processing, including latency, throughput, and operational complexity.</p>
+          <div class="article-tags">
+            <span>Flink</span><span>Spark</span><span>Streaming</span>
+          </div>
+          <a href="#" target="_blank" class="article-link">
+            Read Article <span class="link-arrow">→</span>
+          </a>
+        </article>
+
+        <article class="article-card reveal-up delay-3">
+          <div class="article-meta-top">
+            <span class="article-platform platform-medium">Medium</span>
+            <span class="article-date">Nov 18, 2024</span>
+          </div>
+          <h3 class="article-title">The Hidden Costs of Data Quality Debt</h3>
+          <p class="article-summary">How poor data quality silently compounds into engineering bottlenecks, wrong business decisions, and millions in rework — and a framework for quantifying and addressing it.</p>
+          <div class="article-tags">
+            <span>Data Quality</span><span>Engineering</span>
+          </div>
+          <a href="#" target="_blank" class="article-link">
+            Read Article <span class="link-arrow">→</span>
+          </a>
+        </article>
+
+        <article class="article-card reveal-up delay-4">
+          <div class="article-meta-top">
+            <span class="article-platform platform-substack">Substack</span>
+            <span class="article-date">Oct 2, 2024</span>
+          </div>
+          <h3 class="article-title">dbt Macros That Will Change How You Write SQL</h3>
+          <p class="article-summary">A collection of 12 production-tested dbt macros for schema introspection, dynamic SQL generation, and cross-database compatibility that I use on every project.</p>
+          <div class="article-tags">
+            <span>dbt</span><span>SQL</span><span>Analytics Eng.</span>
+          </div>
+          <a href="#" target="_blank" class="article-link">
+            Read Article <span class="link-arrow">→</span>
+          </a>
+        </article>
+
+        <article class="article-card reveal-up delay-5">
+          <div class="article-meta-top">
+            <span class="article-platform platform-devto">Dev.to</span>
+            <span class="article-date">Aug 14, 2024</span>
+          </div>
+          <h3 class="article-title">Kafka at Scale: Partitioning Strategies Nobody Talks About</h3>
+          <p class="article-summary">Beyond round-robin: advanced Kafka partitioning strategies for maintaining ordering guarantees, hot-partition avoidance, and consumer lag management in high-throughput systems.</p>
+          <div class="article-tags">
+            <span>Kafka</span><span>Distributed Systems</span>
+          </div>
+          <a href="#" target="_blank" class="article-link">
+            Read Article <span class="link-arrow">→</span>
+          </a>
+        </article>
+
+        <article class="article-card reveal-up delay-6">
+          <div class="article-meta-top">
+            <span class="article-platform platform-medium">Medium</span>
+            <span class="article-date">Jun 20, 2024</span>
+          </div>
+          <h3 class="article-title">Orchestrating 10,000 Daily DAGs: An Airflow War Story</h3>
+          <p class="article-summary">How we scaled Apache Airflow from 200 to 10,000 daily DAGs without losing our minds — scheduler tuning, metadata DB optimization, and the secrets nobody documents.</p>
+          <div class="article-tags">
+            <span>Airflow</span><span>Orchestration</span><span>Scale</span>
+          </div>
+          <a href="#" target="_blank" class="article-link">
+            Read Article <span class="link-arrow">→</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section class="section section-contact" id="contact">
+    <canvas id="contactCanvas"></canvas>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">06 / CONTACT</span>
+        <h2 class="section-title">Let's <span class="accent-gradient">Connect</span></h2>
+        <p class="section-sub">Open to senior engineering roles, consulting engagements, and interesting conversations.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info reveal-left">
+          <div class="contact-channels">
+            <a href="mailto:mahdihammi12@gmail.com" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label">Email</span>
+                <span class="channel-value">alex.rivera@email.com</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label">LinkedIn</span>
+                <span class="channel-value">linkedin.com/in/alexrivera</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+
+            <a href="https://github.com" target="_blank" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label">GitHub</span>
+                <span class="channel-value">github.com/alexrivera</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+          </div>
+
+          <div class="contact-availability">
+            <div class="avail-dot"></div>
+            <div>
+              <p class="avail-title">Currently Available</p>
+              <p class="avail-sub">Based in Tunis, Tunisia · Remote-friendly</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/mahdihammi12@gmail.com">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span class="btn-icon">◈</span> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <span>✓</span> Message sent successfully! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">[</span>
+          <span class="logo-text">AR</span>
+          <span class="logo-bracket">]</span>
+          <span class="footer-tagline">Data Engineer</span>
+        </div>
+        <p class="footer-copy">© 2025 Alex Rivera. Designed & built with precision.</p>
+        <div class="footer-links">
+          <a href="#hero">Top</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════ SCROLL TO TOP ════════════════════════════════ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
 </html>
