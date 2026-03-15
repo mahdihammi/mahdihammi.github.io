@@ -231,10 +231,11 @@
   if (!el) return;
 
   const phrases = [
-    'Senior Data Engineer',
-    'Pipeline Architect',
+    'Data Engineer',
+    'GCP Specialist',
+    'Pipelines Builder',
     'Lakehouse Specialist',
-    'Streaming Systems Expert',
+    
   ];
 
   let phraseIdx = 0;
